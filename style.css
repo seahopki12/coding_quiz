@@ -11,3 +11,9 @@
     float: right;   
 }
 
+.container {
+    text-align: center;
+    display: block;
+    margin-top: 5%;
+}
+
