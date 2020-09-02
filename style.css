@@ -11,9 +11,24 @@
     float: right;   
 }
 
-.container {
-    text-align: center;
+.content {
+    
     display: block;
     margin-top: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#intro {
+    text-align: center;
+}
+
+.answers {
+    display: inline-grid;
+
+}
+
+.btn {
+    margin-top: 10px;
 }
 
