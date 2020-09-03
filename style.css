@@ -21,6 +21,7 @@
 
 #intro {
     text-align: center;
+    visibility: visible;
 }
 
 .answers {
@@ -30,5 +31,9 @@
 
 .btn {
     margin-top: 10px;
+}
+
+#questionContainer {
+    visibility: hidden;
 }
 

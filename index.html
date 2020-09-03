@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
 </head>
 
 <body>
@@ -24,66 +23,31 @@
         <button type="button" id="begin" class="btn btn-secondary btn-lg">Click to Begin!</button>
     </container>
 
-    <container class="content" id="questionOne">
-        <h1>Question #1</h1>
+    <container class="content" id="questionContainer">
+        <h1 id="questions">Question #1</h1>
         <div class="answers">
-            <button type="button"  class="btn btn-secondary btn-lg">A</button>
-            <button type="button"  class="btn btn-secondary btn-lg">B</button>
-            <button type="button"  class="btn btn-secondary btn-lg">C</button>
-            <button type="button"  class="btn btn-secondary btn-lg">D</button>
+            <button type="button" class="btn btn-secondary btn-lg a">A</button>
+            <button type="button" class="btn btn-secondary btn-lg b">B</button>
+            <button type="button" class="btn btn-secondary btn-lg c">C</button>
+            <button type="button" class="btn btn-secondary btn-lg d">D</button>
         </div>
     </container>
 
-    <container class="content" id="questionTwo">
-        <h1>Question #2</h1>
-        <div class="answers">
-            <button type="button"  class="btn btn-secondary btn-lg">A</button>
-            <button type="button"  class="btn btn-secondary btn-lg">B</button>
-            <button type="button"  class="btn btn-secondary btn-lg">C</button>
-            <button type="button"  class="btn btn-secondary btn-lg">D</button>
-        </div>
-    </container>
 
-    <container class="content" id="questionThree">
-        <h1>Question #3</h1>
-        <div class="answers">
-            <button type="button" class="btn btn-secondary btn-lg">A</button>
-            <button type="button" class="btn btn-secondary btn-lg">B</button>
-            <button type="button" class="btn btn-secondary btn-lg">C</button>
-            <button type="button" class="btn btn-secondary btn-lg">D</button>
-        </div>
-    </container>
 
-    <container class="content" id="questionFour">
-        <h1>Question #4</h1>
-        <div class="answers">
-            <button type="button" class="btn btn-secondary btn-lg">A</button>
-            <button type="button" class="btn btn-secondary btn-lg">B</button>
-            <button type="button" class="btn btn-secondary btn-lg">C</button>
-            <button type="button" class="btn btn-secondary btn-lg">D</button>
-        </div>
-    </container>
 
-    <container class="content" id="questionFive">
-        <h1>Question #5</h1>
-        <div class="answers">
-            <button type="button" class="btn btn-secondary btn-lg">A</button>
-            <button type="button" class="btn btn-secondary btn-lg">B</button>
-            <button type="button" class="btn btn-secondary btn-lg">C</button>
-            <button type="button" class="btn btn-secondary btn-lg">D</button>
-        </div>
-    </container>
-
-    <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
