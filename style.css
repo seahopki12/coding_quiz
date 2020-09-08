@@ -24,7 +24,7 @@
     visibility: visible;
 }
 
-.answers {
+.options {
     display: inline-grid;
 
 }
@@ -33,7 +33,6 @@
     margin-top: 10px;
 }
 
-#questionContainer {
+.questionContainer {
     visibility: hidden;
 }
-

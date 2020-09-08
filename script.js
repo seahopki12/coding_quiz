@@ -1,16 +1,19 @@
-$(document).ready(function(){
-    $("#begin").on("click", function(){
+$(document).ready(function () {
+    var questions = ["question 1", "question 2", "question 3", "question 4", "question 5"];
+    var aAnswers = ["A", "A", "A", "A", "A"];
+    var bAnswers = ["B", "B", "B", "B", "B"];
+    var cAnswers = ["C", "C", "C", "C", "C"];
+    var dAnswers = ["D", "D", "D", "D", "D"];
+    var i = 0;
+
+    $(".btn").on("click", function () {
         $("#intro").hide();
-        $("#questionContainer").css("visibility",  "visible");
-        $(".btn").on("click", function(){
-            // try a for loop to call a new set of questions and answers when a previous answer is selected
-            $("#questions").text("Question #2: How many days are in a year?")
-            $(".a").text("300")
-            $(".b").text("365")
-            $(".c").text("387")
-            $(".d").text("323")
-            // add evaluation and here and alert if answer is right or wrong
-        })
+        $(".questionContainer").css("visibility", "visible")
+        document.getElementById("questions").innerHTML = questions[i];
+        document.querySelector(".answerA").innerHTML = aAnswers[i];
+        document.querySelector(".answerB").innerHTML = bAnswers[i];
+        document.querySelector(".answerC").innerHTML = cAnswers[i];
+        document.querySelector(".answerD").innerHTML = dAnswers[i];
+        i++;
     });
-    
 });
