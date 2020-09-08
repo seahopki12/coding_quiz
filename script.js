@@ -1,9 +1,15 @@
 $(document).ready(function () {
-    var questions = ["question 1", "question 2", "question 3", "question 4", "question 5"];
-    var aAnswers = ["A", "A", "A", "A", "A"];
-    var bAnswers = ["B", "B", "B", "B", "B"];
-    var cAnswers = ["C", "C", "C", "C", "C"];
-    var dAnswers = ["D", "D", "D", "D", "D"];
+    var questions = [
+        "Question 1: Which tag should you use to denote the use of javascript in an HTML file?",
+        "Question 2: What keyword is used to declare a variable?",
+        "Question 3: What does the ++ symbol indicate?",
+        "Question 4: What two values represent a JS Boolean?",
+        "Question 5: What number represents the first element in an array?"
+    ];
+    var aAnswers = ["script", "vars", "increment by one", "1 and 2", "1"];
+    var bAnswers = ["html", "vari", "add twice", "True and False", "10"];
+    var cAnswers = ["body", "var", "multiply by", "Hot and Cold", "2"];
+    var dAnswers = ["head", "vare", "find sum of", "North and South", "0"];
     var i = 0;
 
     $(".btn").on("click", function () {
