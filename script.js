@@ -11,16 +11,20 @@ $(document).ready(function () {
     var cAnswers = ["body", "var", "multiply by", "Hot and Cold", "2"];
     var dAnswers = ["head", "vare", "find sum of", "North and South", "0"];
     var i = 0;
-    var correctAnswers = [aAnswers[0], cAnswers[1], aAnswers[2], bAnswers[3], dAnswers[4]];
+    var correctAnswers = ["script", "var", "increment by one", "True and False", "0"];
+    var incorrectAnswers = ["html", "body", "head", "vari", "vars", "vare", "add twice", "multiply by", "find sum of", "1 and 2", "Hot and Cold", "North and South", "1", "10", "2"];
 
     $(".btn").on("click", function () {
         $("#intro").hide();
-        $(".questionContainer").css("visibility", "visible")
+        $(".questionContainer").css("visibility", "visible");
+        var buttonClick = $(this).text();
+        if (buttonClick === correctAnswers[i - 1]) {
+            alert("correct");
         document.getElementById("questions").innerHTML = questions[i];
-        document.querySelector(".answerA").innerHTML = aAnswers[i];
-        document.querySelector(".answerB").innerHTML = bAnswers[i];
-        document.querySelector(".answerC").innerHTML = cAnswers[i];
-        document.querySelector(".answerD").innerHTML = dAnswers[i];
+        document.querySelector("#answerA").innerHTML = aAnswers[i];
+        document.querySelector("#answerB").innerHTML = bAnswers[i];
+        document.querySelector("#answerC").innerHTML = cAnswers[i];
+        document.querySelector("#answerD").innerHTML = dAnswers[i];
         i++;
         if (i > questions.length - 1) {
             $(".btn").on("click", function () {
@@ -30,10 +34,10 @@ $(document).ready(function () {
         }
     });
 
-    $("#submit").on("click", function(){
+    $("#submit").on("click", function () {
         $("#initialsContainer").hide();
         $("#highscores").css("visibility", "visible");
         return false;
     })
-    
+
 });
