@@ -17,21 +17,28 @@ $(document).ready(function () {
     $(".btn").on("click", function () {
         $("#intro").hide();
         $(".questionContainer").css("visibility", "visible");
+    });
+
+    $(".answer").on("click", function(){
         var buttonClick = $(this).text();
-        if (buttonClick === correctAnswers[i - 1]) {
+        if (buttonClick === correctAnswers[i]) {
             alert("correct");
-        document.getElementById("questions").innerHTML = questions[i];
-        document.querySelector("#answerA").innerHTML = aAnswers[i];
-        document.querySelector("#answerB").innerHTML = bAnswers[i];
-        document.querySelector("#answerC").innerHTML = cAnswers[i];
-        document.querySelector("#answerD").innerHTML = dAnswers[i];
+        } else {
+            alert("incorrect");
+        }
         i++;
-        if (i > questions.length - 1) {
+        if (i > questions.length - 2) {
             $(".btn").on("click", function () {
                 $(".questionContainer").hide();
                 $("#initialsContainer").css("visibility", "visible");
             })
         }
+        document.getElementById("questions").innerHTML = questions[i];
+        document.getElementById("answerA").innerHTML = aAnswers[i];
+        document.getElementById("answerB").innerHTML = bAnswers[i];
+        document.getElementById("answerC").innerHTML = cAnswers[i];
+        document.getElementById("answerD").innerHTML = dAnswers[i];
+        
     });
 
     $("#submit").on("click", function () {
