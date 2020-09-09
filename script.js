@@ -22,9 +22,17 @@ $(document).ready(function () {
     $(".answer").on("click", function(){
         var buttonClick = $(this).text();
         if (buttonClick === correctAnswers[i]) {
-            alert("correct");
+            $(".alert-danger").hide();
+            $(".alert-success").show();
+            setTimeout(function() {
+                $(".alert-success").hide();
+            }, 2000);
         } else {
-            alert("incorrect");
+            $(".alert-success").hide();
+            $(".alert-danger").show();
+            setTimeout(function() {
+                $(".alert-danger").hide();
+            }, 2000);
         }
         i++;
         if (i > questions.length - 2) {
@@ -38,7 +46,6 @@ $(document).ready(function () {
         document.getElementById("answerB").innerHTML = bAnswers[i];
         document.getElementById("answerC").innerHTML = cAnswers[i];
         document.getElementById("answerD").innerHTML = dAnswers[i];
-        
     });
 
     $("#submit").on("click", function () {
