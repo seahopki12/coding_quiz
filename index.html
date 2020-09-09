@@ -30,7 +30,31 @@
             <button type="button" class="btn btn-secondary btn-lg answerB"></button>
             <button type="button" class="btn btn-secondary btn-lg answerC"></button>
             <button type="button" class="btn btn-secondary btn-lg answerD"></button>
-        </div>  
+        </div>
+    </container>
+
+    <container class="content" id="initialsContainer">
+        <h1>All done!</h1>
+        <p></p>
+        <form class="form-inline">
+            <div class="form-group mb-2">
+                <label for="staticEmail2" class="sr-only"></label>
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Enter Initials:">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="inputPassword2" class="sr-only"></label>
+                <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2" id="submit">Submit</button>
+        </form>
+    </container>
+
+    <container class="content" id="highscores">
+        <h1>Highscores</h1>
+        <div>
+            <button type="button" class="btn btn-secondary btn-lg" id="goBack">Go Back</button>
+            <button type="button" class="btn btn-secondary btn-lg" id="clearHighscores">Clear</button>
+        </div>
     </container>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

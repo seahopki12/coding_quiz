@@ -11,6 +11,7 @@ $(document).ready(function () {
     var cAnswers = ["body", "var", "multiply by", "Hot and Cold", "2"];
     var dAnswers = ["head", "vare", "find sum of", "North and South", "0"];
     var i = 0;
+    var correctAnswers = [aAnswers[0], cAnswers[1], aAnswers[2], bAnswers[3], dAnswers[4]];
 
     $(".btn").on("click", function () {
         $("#intro").hide();
@@ -21,5 +22,18 @@ $(document).ready(function () {
         document.querySelector(".answerC").innerHTML = cAnswers[i];
         document.querySelector(".answerD").innerHTML = dAnswers[i];
         i++;
+        if (i > questions.length - 1) {
+            $(".btn").on("click", function () {
+                $(".questionContainer").hide();
+                $("#initialsContainer").css("visibility", "visible");
+            })
+        }
     });
+
+    $("#submit").on("click", function(){
+        $("#initialsContainer").hide();
+        $("#highscores").css("visibility", "visible");
+        return false;
+    })
+    
 });

@@ -36,3 +36,11 @@
 .questionContainer {
     visibility: hidden;
 }
+
+#initialsContainer {
+    visibility: hidden;
+}
+
+#highscores {
+    visibility: hidden;
+}
