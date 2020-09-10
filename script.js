@@ -12,25 +12,46 @@ $(document).ready(function () {
     var dAnswers = ["head", "vare", "find sum of", "North and South", "0"];
     var i = 0;
     var correctAnswers = ["script", "var", "increment by one", "True and False", "0"];
-    var incorrectAnswers = ["html", "body", "head", "vari", "vars", "vare", "add twice", "multiply by", "find sum of", "1 and 2", "Hot and Cold", "North and South", "1", "10", "2"];
+    var timeEl = document.getElementById("timer");
+    var secondsLeft = 60;
+    
 
-    $(".btn").on("click", function () {
+    
+
+    $("#begin").on("click", function () {
         $("#intro").hide();
         $(".questionContainer").css("visibility", "visible");
+        var timerInterval = setInterval(function () {
+            secondsLeft--;
+            timeEl.textContent = "Timer: " + secondsLeft;
+            if (secondsLeft <= 0) {
+                clearInterval(timerInterval);
+                $(".questionContainer").hide();
+                $("#initialsContainer").css("visibility", "visible");
+            };
+            if (i > questions.length - 2) {
+                $(".btn").on("click", function () {
+                    clearInterval(timerInterval);
+                })
+            }
+        }, 1000);
+        
+        
+
     });
 
-    $(".answer").on("click", function(){
+    $(".answer").on("click", function () {
         var buttonClick = $(this).text();
         if (buttonClick === correctAnswers[i]) {
             $(".alert-danger").hide();
             $(".alert-success").show();
-            setTimeout(function() {
+            setTimeout(function () {
                 $(".alert-success").hide();
             }, 2000);
         } else {
             $(".alert-success").hide();
             $(".alert-danger").show();
-            setTimeout(function() {
+            setTimeout(function () {
                 $(".alert-danger").hide();
             }, 2000);
         }
@@ -47,6 +68,8 @@ $(document).ready(function () {
         document.getElementById("answerC").innerHTML = cAnswers[i];
         document.getElementById("answerD").innerHTML = dAnswers[i];
     });
+
+
 
     $("#submit").on("click", function () {
         $("#initialsContainer").hide();
